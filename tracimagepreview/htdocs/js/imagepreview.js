@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
             this.t = this.title;
             this.title = "";
             var desc = $(this.parentNode.nextElementSibling);
-            var caption = ((desc.prop('tagName') == 'DD') ? desc.text() : (this.t != "") ? '<br />' + this.t : '');
+            var caption = ((desc.prop('tagName') == 'DD') ? '<br />' + desc.text() : (this.t != "") ? '<br />' + this.t : '');
             var url = this.href.replace(/attachment/g, 'raw-attachment');
             $('body').append('<p id="image-preview"><img src="' + url + '" alt="Image preview" style="max-width: 300px"/>' + caption + '</p>');
             $('#image-preview')
