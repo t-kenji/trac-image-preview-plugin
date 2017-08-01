@@ -20,7 +20,9 @@ jQuery(document).ready(function ($) {
                 .css('left', (e.pageX + offset.x) + 'px')
                 .fadeIn('fast');
         }, function() {
-            this.title = this.t;
+            if (this.t != null) {
+                this.title = this.t;
+            }
             $('#image-preview').remove();
         });
         $('#attachments dt > a:first-child, #changelog table[class="changes"] a:first-child').mousemove(function(e) {
